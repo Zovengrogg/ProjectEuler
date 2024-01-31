@@ -1,3 +1,7 @@
+/*
+    Fib finds the Nth fibonacci number and fib_find finds which term in the sequence a number is if it exists
+*/
+
 fib(0, 0).
 fib(1, 1).
 fib(N, Result) :-
