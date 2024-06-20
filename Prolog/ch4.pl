@@ -51,3 +51,40 @@ trans(s3, b, s4).
 silent(s2, s4).
 silent(s3, s1).
 
+accepts(State, [], _) :-
+    final(State).
+
+accepts(S, [X|Rest], Max_moves) :-
+    Max_moves > 0,
+    trans(S, X, S1),
+    Max is Max_moves - 1,
+    accepts(S1, Rest, Max).
+
+accepts(S, String, Max_moves) :-
+    Max_moves > 0,
+    silent(S, S1),
+    Max is Max_moves - 1,
+    accepts(S1, String, Max).
+% String = [_,_,_,_], accepts(s1, String).
+% accepts(S1, [a,b]).
+% accepts(s1, [a,a,a,b]).
+
+jump(X1/Y1, X2/Y2) :-
+    ( 
+        member(X, [X1 - 1, X1 + 1]),
+        member(Y, [Y1 - 2, Y1 + 2])
+      ; member(X, [X1 - 2, X1 + 2]),
+        member(Y, [Y1 - 1, Y1 + 1])
+    ),
+    X2 is X,
+    Y2 is Y,
+    between(1, 8, X2),
+    between(1, 8, Y2).
+
+knightPath([]).
+knightPath([_]).
+knightPath([S1, S2|Rest]) :-
+    jump(S1, S2),
+    knightPath([S2|Rest]).
+
+% Path = [2/1, _, 5/4, _, _/8], knightPath(Path).
