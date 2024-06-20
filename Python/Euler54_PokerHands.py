@@ -2,7 +2,7 @@
 # User poker.txt in files folder
 
 import time
-# import numpy as np
+import numpy as np
 # from math import factorial as f
 from itertools import *
 
