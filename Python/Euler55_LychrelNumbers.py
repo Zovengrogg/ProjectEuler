@@ -6,7 +6,6 @@ import time
 from itertools import *
 
 start = time.time()
-print("Start")
 
 def IsPalindrome(n):
     return str(n) == str(n)[::-1]
