@@ -2,8 +2,8 @@
 # User poker.txt in files folder
 
 import time
-import numpy as np
-from math import factorial as f
+# import numpy as np
+# from math import factorial as f
 from itertools import *
 
 start = time.time()
