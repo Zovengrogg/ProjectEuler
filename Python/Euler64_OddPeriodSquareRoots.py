@@ -22,21 +22,19 @@ def findPeriod(number, start):
     period = []
     digit, num, den = nextDigit(number, start, 1, start)
     period.append(digit)
-    while period[:len(period)//2] != period[len(period)//2:]:
+    while num != 1 or den != start:
         digit, num, den = nextDigit(number, start, num, den)
         period.append(digit)
-    periodLength = ceil(len(period)/2)
-    return periodLength
+    return len(period)
 
 odd = []
-for x in range(2, 13):
+for x in range(2, 10001):
     y = floor(x ** .5)
     w = y * y
     if w != x:
         start = closestSquareRoot(x)
         if(findPeriod(x, start) % 2 == 1):
             odd.append(x)
-            print(x)
 
 print(len(odd))
 
