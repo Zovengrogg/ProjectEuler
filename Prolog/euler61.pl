@@ -49,6 +49,7 @@ Solution definition:
 
     
 */
+
 triangle_number(N, T) :-
     T is N * (N + 1) // 2.
 
