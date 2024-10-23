@@ -3,7 +3,7 @@
 import time
 from math import sqrt, floor, ceil
 
-start = time.time()
+begin = time.time()
 
 def closestSquareRoot(number):
     return floor(sqrt(number))
@@ -39,4 +39,4 @@ for x in range(2, 10001):
 print(len(odd))
 
 
-print("My program took", time.time() - start, "to run.")
+print("My program took", time.time() - begin, "to run.")
