@@ -1,4 +1,4 @@
-# Prime Pair Set https://projecteuler.net/problem=64
+# Odd Period Square Roots https://projecteuler.net/problem=64
 
 import time
 from math import sqrt, floor, ceil

@@ -1,4 +1,4 @@
-# Prime Pair Set https://projecteuler.net/problem=65
+# Convergents of E https://projecteuler.net/problem=65
 
 import time
 from fractions import Fraction
